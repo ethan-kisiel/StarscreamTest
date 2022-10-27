@@ -11,6 +11,7 @@
 		88C9B94B29099A8300C5E02A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C9B94A29099A8300C5E02A /* ContentView.swift */; };
 		88C9B94D29099A8400C5E02A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C9B94C29099A8400C5E02A /* Assets.xcassets */; };
 		88C9B95029099A8400C5E02A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88C9B94F29099A8400C5E02A /* Preview Assets.xcassets */; };
+		88C9B95829099D7C00C5E02A /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 88C9B95729099D7C00C5E02A /* SocketIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		88C9B94A29099A8300C5E02A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		88C9B94C29099A8400C5E02A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		88C9B94F29099A8400C5E02A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		88C9B9592909A28400C5E02A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C9B95829099D7C00C5E02A /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,7 @@
 		88C9B94729099A8300C5E02A /* StarscreamTest */ = {
 			isa = PBXGroup;
 			children = (
+				88C9B9592909A28400C5E02A /* Info.plist */,
 				88C9B94829099A8300C5E02A /* StarscreamTestApp.swift */,
 				88C9B94A29099A8300C5E02A /* ContentView.swift */,
 				88C9B94C29099A8400C5E02A /* Assets.xcassets */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = StarscreamTest;
+			packageProductDependencies = (
+				88C9B95729099D7C00C5E02A /* SocketIO */,
+			);
 			productName = StarscreamTest;
 			productReference = 88C9B94529099A8300C5E02A /* StarscreamTest.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 88C9B93C29099A8300C5E02A;
+			packageReferences = (
+				88C9B95629099D7C00C5E02A /* XCRemoteSwiftPackageReference "socket" */,
+			);
 			productRefGroup = 88C9B94629099A8300C5E02A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -270,11 +280,13 @@
 				DEVELOPMENT_TEAM = 9F6398P4YJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarscreamTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,11 +311,13 @@
 				DEVELOPMENT_TEAM = 9F6398P4YJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StarscreamTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88C9B95629099D7C00C5E02A /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88C9B95729099D7C00C5E02A /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88C9B95629099D7C00C5E02A /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 88C9B93D29099A8300C5E02A /* Project object */;
 }
